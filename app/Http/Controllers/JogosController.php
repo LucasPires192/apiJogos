@@ -18,7 +18,7 @@ class JogosController extends Controller
                     'message' => 'Jogos encontradas com sucesso',
                     'data' => [
                         'total' => $jogos->count(),
-                        'condominios' => $jogos
+                        'items' => $jogos
                     ]
                 ]);
             } catch(\Exception $e){
