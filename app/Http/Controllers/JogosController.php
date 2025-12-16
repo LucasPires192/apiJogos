@@ -8,7 +8,7 @@ use App\Models\jogos;
 
 class JogosController extends Controller
 {
-    public function index(Request $request)
+    public function index()
         {
            try{
                 $jogos = Jogos::All();
@@ -53,7 +53,7 @@ class JogosController extends Controller
                     'nome' => $request->nome,
                     'genero' => $request->genero,
                     'ano' => $request->ano,
-                    'plataform' => $request->platafomra
+                    'plataform' => $request->plataforma
                 ]);
 
                 return response()->json([
@@ -149,7 +149,7 @@ class JogosController extends Controller
                 $jogo->delete();
 
                 return response()->json([
-                    'success' => true,
+                    'success' => false,
                     'message' => 'Jogo deletado com sucesso'
                 ], 200);
             } catch(\Exception $e){

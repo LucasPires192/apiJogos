@@ -10,3 +10,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/jogos', [JogosController::class, 'index']);
+Route::put('/jogos', [JogosController::class, 'update']);
