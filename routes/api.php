@@ -10,4 +10,6 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/jogos', [JogosController::class, 'index']);
-Route::put('/jogos', [JogosController::class, 'update']);
+Route::put('/jogos/{id}', [JogosController::class, 'update']);
+Route::delete('/jogos/{id}', [JogosController::class, 'destroy']);
+Route::post('/jogos', [JogosController::class, 'store']);

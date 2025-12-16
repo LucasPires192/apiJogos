@@ -53,7 +53,7 @@ class JogosController extends Controller
                     'nome' => $request->nome,
                     'genero' => $request->genero,
                     'ano' => $request->ano,
-                    'plataform' => $request->plataforma
+                    'plataforma' => $request->plataforma
                 ]);
 
                 return response()->json([
